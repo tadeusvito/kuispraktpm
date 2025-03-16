@@ -98,10 +98,7 @@ class MainMenu extends StatelessWidget {
               ),
               itemCount: dummyNews.length,
               itemBuilder: (context, index) {
-                return _buildNewsCard(
-                  context,
-                  dummyNews[index],
-                );
+                return _buildNewsCard(context, dummyNews[index]);
               },
             ),
           ),
@@ -112,9 +109,7 @@ class MainMenu extends StatelessWidget {
 
   Widget _buildNewsCard(BuildContext context, NewsModel news) {
     return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       elevation: 6,
       child: Column(
         children: [
@@ -144,21 +139,21 @@ class MainMenu extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 8),
-                // ElevatedButton(
-                //   onPressed: () {
-                //     Navigator.push(
-                //       context,
-                //       MaterialPageRoute(
-                //         builder: (context) => ModelPage,
-                //       ),
-                //     );
-                //   },
-                //   child: Text('Baca Selengkapnya'),
-                //   style: ElevatedButton.styleFrom(
-                //     backgroundColor: Colors.blue,
-                //     foregroundColor: Colors.white,
-                //   ),
-                // ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DetailNewsPage(news: news),
+                      ),
+                    );
+                  },
+                  child: Text('Baca Selengkapnya'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
+                  ),
+                ),
               ],
             ),
           ),
