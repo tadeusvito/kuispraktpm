@@ -45,7 +45,7 @@ class LoginPage extends StatelessWidget {
                   Icon(Icons.newspaper, size: 100, color: Colors.white),
                   SizedBox(height: 20),
                   Text(
-                    "Welcome to FoodApp",
+                    "Welcome to News APP",
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
